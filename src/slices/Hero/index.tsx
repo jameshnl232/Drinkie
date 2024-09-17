@@ -137,10 +137,10 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           </div>
         </div>
         <div className="text-side itens.center relative z-[80] grid h-screen grid-cols-1 gap-4 md:grid-cols-2">
-          <PrismicNextImage
+         {/*  <PrismicNextImage
             className="w-full md:hidden"
             field={slice.primary.cansimage}
-          />
+          /> */}
           <div>
             <div className="h2 text-side-heading text-balance text-6xl font-black uppercase text-pink-950 lg:text-8xl">
               <TextSplitter text={asText(slice.primary.secondheading)} />
