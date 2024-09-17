@@ -134,7 +134,7 @@ export default function Scene({ sentence, flavor }: SkyDiveProps) {
         wordsRef.current.children.map((word) => word.position),
         {
           keyframes: [
-            { x: 1.5 , y: -3, z: -2 },
+            { x: 1.5, y: -3, z: -2 },
             { ...getXYPosition(-10), z: -13 },
           ],
           stagger: 0.3,
@@ -147,7 +147,7 @@ export default function Scene({ sentence, flavor }: SkyDiveProps) {
         duration: 1.5,
         ease: "sine.out",
       })
-      .to(cloudsRef.current.position, { z: 7, duration: 1.5 })
+      .to(cloudsRef.current.position, { z: 7, duration: 1.5 });
   });
   return (
     <group ref={groupRef}>
@@ -159,21 +159,16 @@ export default function Scene({ sentence, flavor }: SkyDiveProps) {
           rotationIntensity={0}
           floatIntensity={1}
         >
-          <pointLight intensity={30} color="#0fa68d" decay={0.6}/>
+          <pointLight intensity={30} color="#0fa68d" decay={0.6} />
         </FloatingCan>
       </group>
-      /* Clouds */
       <Clouds material={THREE.MeshBasicMaterial} ref={cloudsRef}>
         <Cloud ref={cloud1Ref} bounds={[10, 10, 2]} color="orange" />
         <Cloud ref={cloud2Ref} bounds={[10, 10, 2]} color="gray" />
       </Clouds>
-      /* Words */
       <group ref={wordsRef}>
         {sentence && <ThreeText sentence={sentence} color="blue" />}
       </group>
-      /*orbit controls*/
-      {/*         <OrbitControls /> */}
-      /* Lights */
       <ambientLight intensity={0.5} color="9DDEFA" />
       <Environment files={["/hdrs/field.hdr"]}></Environment>
     </group>
@@ -204,8 +199,7 @@ function ThreeText({
         characters="ABCDEFGHIJKLMNOPQRSTUVWXY!,.?"
         key={`${index} - ${word}`}
       >
-        {" "}
-        {word}{" "}
+        {word}
       </Text>
     );
   });
