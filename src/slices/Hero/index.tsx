@@ -116,7 +116,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       <div className="grid">
         <div className="grid h-screen place-items-center">
           <div className="grid auto-rows-min place-content-center gap-y-2 text-center">
-            <h1 className="hero-header text-8xl font-black uppercase leading-[.8] md:text-[10rem] lg:text-[10rem]">
+            <h1 className="hero-header text-8xl font-black uppercase leading-[.8] md:text-[10rem] mt-10 lg:text-[10rem]">
               <TextSplitter
                 className="hero-header-word bg-gradient-to-bl from-stone-800 via-indigo-600 to-teal-900 bg-clip-text text-transparent"
                 wordDisplayStyle="block"

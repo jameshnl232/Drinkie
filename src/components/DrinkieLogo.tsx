@@ -2,7 +2,6 @@
 
 import { SVGProps } from "react";
 import clsx from "clsx";
-import classes from "./DrinkieLogo.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Observer } from "gsap/Observer";
@@ -11,12 +10,19 @@ gsap.registerPlugin(useGSAP, Observer);
 
 export function DrinkieLogo(props: SVGProps<SVGSVGElement>) {
   useGSAP(() => {
-    gsap.from(".drinkie-logo", {
+    gsap.set(".drinkie-logo", {
       opacity: 0,
       x: -500,
+    });
+
+    gsap.to(".drinkie-logo", {
+      opacity: 1,
+      x: 0,
       duration: 1,
       ease: "bounce.out",
     });
+
+    gsap;
 
     Observer.create({
       target: ".drinkie-logo",
