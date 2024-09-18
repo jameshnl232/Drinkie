@@ -19,6 +19,7 @@ export function DrinkieLogo(props: SVGProps<SVGSVGElement>) {
       opacity: 1,
       x: 0,
       duration: 1,
+      delay: 1,
       ease: "bounce.out",
     });
 

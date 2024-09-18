@@ -104,7 +104,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="hero opacity-0 md:mt-20 bg-pink-300"
+      className="hero bg-pink-300 !pt-0 opacity-0 mx-auto w-screen overflow-hidden"
     >
       {onComputer && (
         <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
@@ -114,9 +114,9 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
       )}
 
       <div className="grid">
-        <div className="grid h-screen place-items-center">
-          <div className="grid auto-rows-min place-content-center gap-y-2 text-center">
-            <h1 className="hero-header text-8xl font-black uppercase leading-[.8] md:text-[10rem] mt-10 lg:text-[10rem]">
+        <div className="grid h-screen place-items-start justify-center">
+          <div className="grid auto-rows-min items-center justify-center gap-y-2 text-center">
+            <h1 className="hero-header mt-10 text-8xl font-black uppercase leading-[.8] md:text-[10rem] lg:text-[10rem]">
               <TextSplitter
                 className="hero-header-word bg-gradient-to-bl from-stone-800 via-indigo-600 to-teal-900 bg-clip-text text-transparent"
                 wordDisplayStyle="block"
@@ -137,7 +137,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
           </div>
         </div>
         <div className="text-side itens.center relative z-[80] grid h-screen grid-cols-1 gap-4 md:grid-cols-2">
-         {/*  <PrismicNextImage
+          {/*  <PrismicNextImage
             className="w-full md:hidden"
             field={slice.primary.cansimage}
           /> */}
