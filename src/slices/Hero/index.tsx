@@ -104,7 +104,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
     <Bounded
       data-slice-type={slice.slice_type}
       data-slice-variation={slice.variation}
-      className="hero bg-pink-300 !pt-0 opacity-0 mx-auto w-screen overflow-hidden"
+      className="hero mx-auto w-screen bg-pink-300 opacity-0 "
     >
       {onComputer && (
         <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
